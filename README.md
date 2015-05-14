@@ -11,11 +11,15 @@ This is really quite simple to use.
 1. Checkout the repository.
 2. Install all gems using Bundler.
 
-    bundle install --path vendor/bundle
+      bundle install --path vendor/bundle
 
-3. Make a request using cURL.
+3. Start server.
 
-    curl "http://${remote_host}:5000/1s" > /dev/null
+      bundle exec ruby ./slow.rb
+
+4. Make a request using cURL.
+
+      curl "http://${remote_host}:5000/1s" > /dev/null
 
 You can specify a request time in the form of seconds or minutes, like so:
 
