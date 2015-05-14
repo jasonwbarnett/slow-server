@@ -4,6 +4,7 @@ require 'json'
 
 configure do
   set :server, :puma
+  set :bind, '0.0.0.0'
   set :port, ENV['SLOW_SERVER_PORT'] || 5000
 end
 
