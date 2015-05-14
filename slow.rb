@@ -13,7 +13,7 @@ before do
 
   stocks = File.readlines('stocks.json')
 
-  @stocks_json = stocks.map do |stock|
+  @stocks_json = stocks[0..999].map do |stock|
     JSON.parse(stock)
   end
 end
