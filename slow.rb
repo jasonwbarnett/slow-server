@@ -2,6 +2,11 @@
 require 'sinatra'
 require 'json'
 
+configure do
+  set :server, :puma
+  set :port, ENV['SLOW_SERVER_PORT'] || 5000
+end
+
 before do
   content_type 'application/json'
 
@@ -12,7 +17,6 @@ before do
   end
 end
 
-set :port, ENV['SLOW_SERVER_PORT'] || 5000
 
 get %r{\A/([0-9]+)s\z} do
   num = params['captures'].first.to_i
