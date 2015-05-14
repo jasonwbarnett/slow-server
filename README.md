@@ -26,3 +26,8 @@ You can specify a request time in the form of seconds or minutes, like so:
 - `/22s` This would delay the request by 22 seconds
 - `/4m` This would delay the request by 4 minutes
 - `/260s` This would delay the request by 260 seconds
+
+### Configurations
+
+- Environment Variable: `SLOW_SERVER_PORT`
+- Default Value: 5000

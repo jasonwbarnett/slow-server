@@ -12,7 +12,7 @@ before do
   end
 end
 
-set :port, 5000
+set :port, ENV['SLOW_SERVER_PORT'] || 5000
 
 get %r{\A/([0-9]+)s\z} do
   num = params['captures'].first.to_i
